@@ -6,9 +6,9 @@ class Admin::DashboardController < ApplicationController
 
   layout "admin"
   def index
-
-  	
-
-
+  	@admin_prizes = Admin::Prize.all
   end
+
+
+  
 end

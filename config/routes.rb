@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
  
 
+  
   resources :subscribers
   root 'pages#index'
   get 'admin' => 'admin/dashboard#index'
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resource :dashboard, only: [:index]
     resources :users
+    resources :prizes
     
   end
 
