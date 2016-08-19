@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tienda Packend</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+	<div class="container-fluid">		
+		<div class="navbar-brand">
+			<%= link_to 'Tienda Packend', root_path%>
+		</div>	
+			<ul class="nav navbar-nav navbar-right">				
+				<li><%= link_to 'Editar cuenta', edit_user_registration_path  %></li>
+				<li><%= link_to 'Salir', destroy_user_session_path, method: :delete  %></li>
+			</ul>	
+	</div>
+</nav>
+
+<div class="container">
+	<% flash.each do |msg_type, msg| %>
+		<%= content_tag :div, msg, class: 'alert alert-info' %>
+	<% end %>
+	<%= yield %>
+</div>
+
+
+</body>
+</html>
