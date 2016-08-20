@@ -1,19 +1,29 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @admin_prize.name %>
-</p>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">	
+		<div class="panel panel-default">
+			<p id="notice"><%= notice %></p>            
+		    <div class="panel-heading">
+				<p>
+				  <strong>Name:</strong>
+				  <%= @admin_prize.name %>
+				</p>		        
+		    </div>
+		    <div class="panel-body"> 
+				<p>
+				  <strong>Description:</strong>
+				  <%= @admin_prize.description %>
+				</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @admin_prize.description %>
-</p>
-
-<p>
-  <strong>Amount:</strong>
-  <%= @admin_prize.amount %>
-</p>
-
-<%= link_to 'Edit', edit_admin_prize_path(@admin_prize) %> |
-<%= link_to 'Back', admin_path %>
+				<p>
+				  <strong>Amount:</strong>
+				  <%= @admin_prize.amount %>
+				</p>
+		   </div>   
+		    <div class="panel-footer">
+		    	<%= link_to 'Editar', edit_admin_prize_path(@admin_prize) %> |		 
+		        <%= link_to 'Regresar', admin_path %>
+		    </div>    
+		</div>
+	</div>
+</div>

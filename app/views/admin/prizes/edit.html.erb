@@ -1,6 +1,16 @@
-<h1>Editing Admin Prize</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @admin_prize %> |
-<%= link_to 'Back', admin_path %>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">	
+		<div class="panel panel-default">            
+		    <div class="panel-heading">
+		      <h1>Editar Premio</h1>     
+		    </div>
+		    <div class="panel-body">                
+		     <%= render 'form' %>	 
+		   </div>   
+		    <div class="panel-footer">
+		      <%= link_to 'Ver', @admin_prize %> |	
+		      <%= link_to 'Regresar', admin_path %>
+		    </div>    
+		</div>
+	</div>
+</div>

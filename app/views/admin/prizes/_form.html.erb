@@ -1,29 +1,29 @@
-<%= form_for(@admin_prize) do |f| %>
-  <% if @admin_prize.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@admin_prize.errors.count, "error") %> prohibited this admin_prize from being saved:</h2>
 
-      <ul>
-      <% @admin_prize.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_for(@admin_prize) do |f| %>  
+        <% if @admin_prize.errors.any? %>  
+        <div id="error_explanation">
+          <h2><%= pluralize(@admin_prize.errors.count, "error") %> prohibited this admin_prize from being saved:</h2>
+          <ul>
+            <% @admin_prize.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
+        <div class="form-group">
+          <%= f.label :name %><br>
+          <%= f.text_field :name, class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description %><br>
+          <%= f.text_area :description, class:"form-control"  %>
+        </div>
+        <div class="form-group">
+          <%= f.label :amount %><br>
+          <%= f.text_field :amount, class:"form-control"  %>
+        </div>
+        <div class="from-group">
+          <%= f.submit "Crear Premio", class: "btn btn-primary" %>
+        </div>    
+<% end %>    
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :amount %><br>
-    <%= f.text_field :amount %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
