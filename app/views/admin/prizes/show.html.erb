@@ -20,6 +20,12 @@
 				  <%= @admin_prize.amount %>
 				</p>
 		   </div>   
+
+			
+
+			<%= render "form_condition" %>
+
+
 		    <div class="panel-footer">
 		    	<%= link_to 'Editar', edit_admin_prize_path(@admin_prize) %> |		 
 		        <%= link_to 'Regresar', admin_path %>

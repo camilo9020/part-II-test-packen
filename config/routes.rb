@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resource :dashboard, only: [:index]
     resources :users
     resources :prizes
+    resources :conditions
     
   end
 

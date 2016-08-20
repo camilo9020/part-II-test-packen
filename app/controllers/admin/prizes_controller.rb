@@ -6,6 +6,8 @@ class Admin::PrizesController < ApplicationController
   # GET /admin/prizes/1
   # GET /admin/prizes/1.json
   def show
+
+    @admin_condition = Admin::Condition.new
   end
 
   # GET /admin/prizes/new

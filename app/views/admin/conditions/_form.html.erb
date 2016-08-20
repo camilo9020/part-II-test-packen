@@ -1,0 +1,26 @@
+
+<%= form_for(@admin_condition) do |f| %>  
+        <% if @admin_condition.errors.any? %>  
+        <div id="error_explanation">
+          <h2><%= pluralize(@admin_condition.errors.count, "error") %> prohibited this admin_condition from being saved:</h2>
+          <ul>
+            <% @admin_condition.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
+        <div class="form-group">
+          <%= f.label :type %><br>
+          <%= f.text_field :type, class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :data %><br>
+          <%= f.text_area :data, class:"form-control"  %>
+        </div>
+      
+        <div class="from-group">
+          <%= f.submit class: "btn btn-primary" %>
+        </div>    
+<% end %>    
+
